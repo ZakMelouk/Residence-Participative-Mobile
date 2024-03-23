@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/residentTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Un pic est defini pour la date du. Est ce que vous vous engagez a n'utiliser seulement le stric minimum ?"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/Oui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oui"
+            android:layout_marginTop="85dp"
+            android:layout_marginLeft="100dp"
+            android:textColor="#18242e"
+            android:textColorHint="#18242e" />
+
+        <Button
+            android:id="@+id/Non"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="85dp"
+            android:text="Non"
+            android:layout_marginLeft="200dp"
+            android:textColor="#18242e"
+            android:textColorHint="#18242e" />
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

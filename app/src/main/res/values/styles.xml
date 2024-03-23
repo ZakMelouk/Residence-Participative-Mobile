@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SpinnerStyle" parent="Widget.AppCompat.Spinner">
+        <!-- Ajoutez ici les attributs de style que vous souhaitez personnaliser -->
+        <item name="android:popupBackground">#FFD700</item> <!-- Fond bleu -->
+        <item name="android:popupElevation">2dp</item> <!-- Ajoutez cette ligne pour l'ombre -->
+        <item name="android:background">#FFD700</item> <!-- Couleur de fond du Spinner -->
+        <item name="android:dropDownSelector">#FFD700</item> <!-- Couleur du texte sélectionné (jaune) -->
+        <item name="android:spinnerItemStyle">@style/SpinnerItemStyle</item> <!-- Style du texte du Spinner -->
+    </style>
+    <style name="CustomAlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Couleur du texte -->
+        <item name="android:textColor">#FFD700</item> <!-- Jaune -->
+        <item name="android:background">#18242e</item> <!-- Bleu -->
+    </style>
+    <style name="SpinnerItemStyle" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:textColor">#FFFFD700</item> <!-- Couleur du texte dans la liste déroulante (jaune) -->
+    </style>
+
+    <style name="CalendarDateText">
+        <item name="android:textColor">#FFD700</item>
+        <!-- Autres attributs de style pour les jours du mois -->
+    </style>
+
+    <!-- Style pour le texte des jours de la semaine -->
+    <style name="CalendarWeekDayText">
+        <item name="android:textColor">#FFD700</item>
+        <!-- Autres attributs de style pour les jours de la semaine -->
+    </style>
+    <style name="SelectedDayStyle">
+        <item name="android:textColor">#FFD700</item>
+        <!-- Autres attributs de style pour le jour sélectionné si nécessaire -->
+    </style>
+
+    <style name="MyDatePickerStyle" parent="@android:style/Widget.Material.DatePicker">
+        <!-- Change la couleur du texte de la date sélectionnée -->
+        <item name="android:textColorPrimary">#FFD700</item>
+        <!-- Change la couleur de fond du DatePicker -->
+        <item name="android:background"></item>
+        <!-- Change la couleur des séparateurs de DatePicker -->
+        <item name="android:datePickerDialogTheme">@style/MyDatePickerDialogTheme</item>
+    </style>
+
+    <style name="MyDatePickerDialogTheme" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <item name="colorAccent"></item>
+    </style>
+</resources>

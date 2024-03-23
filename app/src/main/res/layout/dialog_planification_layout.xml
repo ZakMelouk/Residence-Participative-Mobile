@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#18242e"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <!-- Formulaire de planification -->
+    <TextView
+        android:id="@+id/textPlanifier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Planifier une utilisation"
+        android:textColor="#FFD700"
+        android:layout_marginStart="100dp"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/textDebut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Début"
+        android:layout_below="@+id/textPlanifier"
+        android:textColor="#FFD700"
+        android:textSize="20sp"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="16dp" />
+    <TextView
+        android:id="@+id/textDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dd   /  MM   /  yyyy"
+        android:layout_below="@+id/textDebut"
+        android:textColor="#FFD700"
+        android:textSize="20sp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="16dp" />
+    <TextView
+        android:id="@+id/textHeure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="   HH  :   mm"
+        android:layout_below="@+id/textDebut"
+        android:textColor="#FFD700"
+        android:textSize="18sp"
+        android:layout_marginStart="243dp"
+        android:layout_marginTop="16dp" />
+
+
+    <!-- DatePicker pour la date de début -->
+    <DatePicker
+        android:id="@+id/datePickerStart"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_below="@+id/textDate"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:padding="-40dp"
+        android:theme="@style/MyDatePickerStyle"
+        android:scaleY="0.80"
+        android:scaleX="0.80"
+        android:layout_marginTop="8dp" />
+
+    <!-- TimePicker pour l'heure de début -->
+    <NumberPicker
+        android:id="@+id/hourPickerStart"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:layout_toRightOf="@id/datePickerStart"
+        android:textColor="#FFD700"
+        android:layout_alignTop="@id/datePickerStart"
+         />
+
+    <NumberPicker
+        android:textColor="#FFD700"
+        android:id="@+id/minutePickerStart"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/hourPickerStart"
+        android:layout_alignTop="@id/hourPickerStart"
+        />
+
+
+
+    <TextView
+        android:id="@+id/textFin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fin"
+        android:layout_below="@+id/datePickerStart"
+        android:textColor="#FFD700"
+        android:textSize="20sp"
+        android:layout_marginStart="183dp"
+        android:layout_marginTop="16dp" />
+    <TextView
+        android:id="@+id/textDate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dd   /  MM   /  yyyy"
+        android:layout_below="@+id/textFin"
+        android:textColor="#FFD700"
+        android:textSize="20sp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="16dp" />
+    <TextView
+        android:id="@+id/textHeure2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="   HH  :   mm"
+        android:layout_below="@+id/textFin"
+        android:textColor="#FFD700"
+        android:textSize="18sp"
+        android:layout_marginStart="243dp"
+        android:layout_marginTop="16dp" />
+
+
+    <!-- DatePicker pour la date de début -->
+    <DatePicker
+        android:id="@+id/datePickerEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_below="@+id/textDate2"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:padding="-40dp"
+        android:scaleY="0.80"
+        android:scaleX="0.80"
+        android:theme="@style/MyDatePickerStyle"
+        android:layout_marginTop="8dp" />
+
+    <!-- TimePicker pour l'heure de début -->
+    <NumberPicker
+        android:textColor="#FFD700"
+        android:id="@+id/hourPickerEnd"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:layout_toEndOf="@id/datePickerEnd"
+        android:layout_alignTop="@id/datePickerEnd"
+        />
+
+    <NumberPicker
+        android:textColor="#FFD700"
+        android:id="@+id/minutePickerEnd"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/hourPickerEnd"
+        android:layout_alignTop="@id/hourPickerEnd"
+        />
+
+
+    <Button
+        android:id="@+id/buttonPlanifier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/datePickerEnd"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="13dp"
+        android:textColor="#18242e"
+        android:textColorHint="#18242e"
+        android:onClick="onPlanifierClick"
+        android:text="Planifier" />
+
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonPlanifier"
+        android:layout_alignTop="@+id/buttonPlanifier"
+        android:onClick="onPlanifierClick"
+        android:layout_marginLeft="70dp"
+        android:textColor="#18242e"
+        android:textColorHint="#18242e"
+        android:text="Annuler" />
+    <!-- Vos éléments existants -->
+
+
+
+</RelativeLayout>

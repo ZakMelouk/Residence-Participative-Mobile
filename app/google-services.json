@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "215878725024",
+    "project_id": "monappli-28215",
+    "storage_bucket": "monappli-28215.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215878725024:android:fafa06249cface8544c8c5",
+        "android_client_info": {
+          "package_name": "iut.dam.projetdevmobilefinal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBV4j0KuvE1CnbQ78JGsSO_nAQFYoXf4Mc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

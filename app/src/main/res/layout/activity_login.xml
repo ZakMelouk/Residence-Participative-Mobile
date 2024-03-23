@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#18242e"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:scaleType="centerCrop" />
+
+    <EditText
+        android:id="@+id/TextEmail"
+        android:textColor="#FFD700"
+        android:textColorHint="#FFD700"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageViewLogo"
+        android:layout_height="wrap_content"
+        android:hint="Email" />
+
+    <EditText
+        android:id="@+id/TextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/TextEmail"
+        android:layout_marginTop="16dp"
+        android:inputType="textPassword"
+        android:textColor="#FFD700"
+        android:textColorHint="#FFD700"
+        android:hint="Mot de passe" />
+
+    <Button
+        android:id="@+id/buttonForgotPassword"
+        android:layout_width="165dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/buttonLogin"
+        android:layout_marginTop="30dp"
+        android:text="Mot de passe oublié"
+        android:textColor="#18242e"
+        android:textColorHint="#18242e"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="165dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/TextPassword"
+        android:backgroundTint = "#FFF"
+        android:layout_marginTop="16dp"
+        android:text="Se connecter"
+        android:textColor="#18242e"
+        android:textColorHint="#18242e"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/buttonCreateAccount"
+        android:layout_width="165dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/buttonLoginSocial"
+        android:text="Créer un compte"
+        android:textColor="#18242e"
+        android:textColorHint="#18242e"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/buttonLoginSocial"
+        android:layout_width="165dp"
+        android:layout_height="70dp"
+        android:textColor="#18242e"
+        android:textColorHint="#18242e"
+        android:text="Se connecter avec Google"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/buttonForgotPassword"
+        android:layout_marginTop="30dp"
+        />
+</RelativeLayout>

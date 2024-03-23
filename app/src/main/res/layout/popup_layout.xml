@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#18242e"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_marginStart="115dp"
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text=" "
+        android:textSize="18sp"
+        android:textColor="#FFD700" />
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- TextView 1 -->
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=" "
+            android:textSize="18sp"
+            android:textColor="#FFD700" />
+
+        <!-- TextView 2 -->
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="18sp"
+            android:textColor="#FFD700" />
+    </LinearLayout>
+
+    <!-- Bouton 1 -->
+    <Button
+        android:layout_marginStart="100dp"
+        android:id="@+id/button1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:textColor="#18242e"
+        android:textColorHint="#18242e"
+        android:layout_marginTop="16dp" />
+
+    <!-- Bouton 2 -->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_marginStart="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Plannifier\nune utilisation"
+            android:textColor="#18242e"
+            android:textColorHint="#18242e" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:layout_alignTop="@+id/button2"
+            android:text="Supprimer\n l'équipement"
+            android:textColor="#18242e"
+            android:textColorHint="#18242e" />
+    </RelativeLayout>
+
+</LinearLayout>

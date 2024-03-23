@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#18242e"
+        tools:context=".MonHabitatFragment">
+
+        <ImageView
+            android:id="@+id/imageCoin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="onImageClick"
+            android:layout_marginLeft="350dp"
+            android:focusable="true"
+            android:layout_marginTop="13dp"
+            android:src="@drawable/baseline_currency_bitcoin_24"
+            />
+
+        <TextView
+            android:id="@+id/ecoCoin"
+            android:textColor="#FFD700"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:layout_marginLeft="373dp"
+            android:layout_marginTop="11dp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:textColor="#FFD700"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Mon habitat"
+            android:textSize="30sp"/>
+        <TextView
+            android:textColor="#FFD700"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="160dp"
+            android:layout_marginLeft="130dp"
+            android:layout_height="wrap_content"
+            android:text="Ma consommation"
+            android:textSize="18sp"/>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:max="3000"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="210dp"
+            android:progressDrawable="@drawable/progress_bar_custom"
+            android:progress="0" />
+        <TextView
+            android:id="@+id/textViewProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:textColor="#FFD700"
+            android:layout_marginStart="300dp"
+            android:layout_marginTop="210dp"/>
+        <TextView
+            android:textColor="#FFD700"
+            android:layout_width="match_parent"
+            android:layout_marginTop="260dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content"
+            android:text="Mes équipements"
+            android:textSize="18sp"/>
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="300dp"
+            android:layout_marginStart="20dp"
+            android:columnCount="2"
+            android:rowCount="3">
+
+            <!-- Première ligne d'images -->
+            <ImageView
+                android:id="@+id/imageViewAspirateur"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:clickable="true"
+                android:onClick="onImageClick"
+                android:focusable="true"
+                android:src="@drawable/ic_aspirateur"
+                />
+            <ImageView
+                android:id="@+id/imageViewClimatiseur"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:clickable="true"
+                android:onClick="onImageClick"
+                android:focusable="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_climatiseur" />
+
+            <!-- Deuxième ligne d'images -->
+            <ImageView
+                android:id="@+id/imageFer"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:clickable="true"
+                android:onClick="onImageClick"
+                android:focusable="true"
+                android:src="@drawable/ic_fer_a_repasser" />
+            <ImageView
+                android:id="@+id/imageViewRadiateur"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:clickable="true"
+                android:onClick="onImageClick"
+                android:layout_marginLeft="10dp"
+                android:focusable="true"
+                android:src="@drawable/radiateur" />
+
+            <!-- Troisième ligne d'images -->
+            <ImageView
+                android:id="@+id/imageViewMachineaLaver"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:clickable="true"
+                android:onClick="onImageClick"
+                android:focusable="true"
+                android:src="@drawable/ic_machine_a_laver" />
+            <ImageView
+                android:id="@+id/imageViewTelevision"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:clickable="true"
+                android:layout_marginLeft="10dp"
+                android:onClick="onImageClick"
+                android:focusable="true"
+                android:src="@drawable/television" />
+
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="280dp"
+            android:layout_gravity="end|top"
+            android:layout_marginTop="253dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ajouter un équipement"
+                android:textColor="#FFD700"
+                android:textSize="18sp"
+
+                android:layout_marginTop="8dp" />
+
+            <Spinner
+                android:id="@+id/spinnerEquipment"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                style="@style/SpinnerStyle"
+                android:layout_marginStart="17dp" />
+
+            <!-- Utilisation d'un LinearLayout horizontal pour les EditText -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editTextReference"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#FFD700"
+                    android:textColorHint="#FFD700"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="8dp"
+                    android:textSize="14sp"
+                    android:hint="Référence" />
+
+                <EditText
+                    android:id="@+id/editTextConsumption"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#FFD700"
+                    android:textColorHint="#FFD700"
+                    android:layout_marginTop="30dp"
+                    android:textSize="14sp"
+                    android:hint="Consommation"
+                    android:inputType="numberDecimal" />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="165dp"
+                android:layout_height="50dp"
+                android:textColor="#18242e"
+                android:textColorHint="#18242e"
+                android:id="@+id/ButtonAjouterEquipement"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="5dp"
+                android:onClick="onAddEquipmentClick"
+                android:text="Ajouter" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="540dp">
+
+            <TextView
+                android:id="@+id/textViewConsommationGlobale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Consommation globale"
+                android:textColor="#FFD700"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp" />
+
+            <com.stacktips.view.CustomCalendarView
+                android:layout_below="@+id/textViewConsommationGlobale"
+                android:layout_marginTop="20dp"
+                android:id="@+id/calendar_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F5F5F5"
+                app:calendarBackgroundColor="#F5F5F5"
+                app:calendarTitleTextColor="#000000"
+                app:currentDayOfMonthColor="#0000FF"
+                app:dayOfMonthTextColor="#000000"
+                app:dayOfWeekTextColor="#000000"
+                app:disabledDayBackgroundColor="#F5F5F5"
+                app:disabledDayTextColor="#808080"
+                app:selectedDayBackgroundColor="#0000FF"
+                app:titleLayoutBackgroundColor="#FFFFFF"
+                app:weekLayoutBackgroundColor="#FFFFFF">
+            </com.stacktips.view.CustomCalendarView>
+
+
+
+        </RelativeLayout>
+
+    </FrameLayout>
+</ScrollView>
+

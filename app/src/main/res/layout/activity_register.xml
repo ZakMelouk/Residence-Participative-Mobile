@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#18242e"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:scaleType="centerCrop" />
+
+    <!-- Ajoutez des EditText pour chaque champ -->
+    <EditText
+        android:id="@+id/editTextFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="127dp"
+        android:layout_marginTop="250dp"
+        android:textColor="#FFD700"
+        android:textColorHint="#FFD700"
+        android:hint="Nom" />
+
+    <EditText
+        android:id="@+id/editTextLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/editTextFirstName"
+        android:layout_alignTop="@id/editTextFirstName"
+        android:layout_marginLeft="50dp"
+        android:textColor="#FFD700"
+        android:textColorHint="#FFD700"
+        android:hint="Prénom" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_marginLeft="173dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextLastName"
+        android:textColor="#FFD700"
+        android:layout_marginTop="10dp"
+        android:textColorHint="#FFD700"
+        android:hint="E-mail" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextEmail"
+        android:hint="Mot de passe"
+        android:textColor="#FFD700"
+        android:textColorHint="#FFD700"
+        android:layout_marginTop="10dp"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/editTextFloor"
+        android:layout_marginLeft="90dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPassword"
+        android:hint="Étage du résident"
+
+        android:textColor="#FFD700"
+        android:textColorHint="#FFD700"
+        android:layout_marginTop="10dp"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editTextHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Taille"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/editTextFloor"
+        android:layout_alignTop="@id/editTextFloor"
+        android:textColor="#FFD700"
+        android:textColorHint="#FFD700"
+        android:inputType="numberDecimal" />
+
+    <!-- Ajoutez un bouton pour l'inscription -->
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="165dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/editTextHeight"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="40dp"
+        android:textColor="#18242e"
+        android:textColorHint="#18242e"
+        android:text="S'inscrire" />
+
+    <Button
+        android:id="@+id/Connexion"
+        android:layout_width="165dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/buttonRegister"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textColor="#18242e"
+        android:textColorHint="#18242e"
+        android:text="Se connecter" />
+
+</RelativeLayout>
